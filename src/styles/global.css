@@ -1,0 +1,13 @@
+:root {
+  --primary: #20B2AA;
+  --accent: #4800CD;
+  --bg: #0D1117;
+  --text: #E6E6E6;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+}

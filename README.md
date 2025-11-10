@@ -1,38 +1,16 @@
-# Lumen — Frontend
+# React + Vite
 
-## Integrantes da Dupla
-- Carla Evelyn Colares Inacio — 556574 — carlaevelyn@alu.ufc.br
-- Maria José Pinho Barros — 556324 — maria.barros@alu.ufc.br
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Descrição do Projeto
-Lumen é uma plataforma voltada para conectar estudantes por meio de interesses em comum,
-facilitando a formação dos grupos de estudo, colaboração em projetos e visibilidade de talentos
-como arte, música e iniciativas acadêmicas.
+Currently, two official plugins are available:
 
-O objetivo é proporcionar um ambiente seguro, simples e livre de pressão social,
-especialmente para estudantes os mais tímidos ou reservados.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Tecnologias Utilizadas
-- React + Vite
-- HTML, CSS
-- React Router DOM
-- Axios (integração com API)
-- Fonte: Nunito Sans
-- Cores: #20B2AA (primária) e #4800CD (acento)
+## React Compiler
 
-## Como Executar o Frontend
-1. Clone este repositório:
-https://github.com/seuusuario/web-2025-2-lumen-colares-pinho-frontend
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-3. Instale as dependências:
-npm install
+## Expanding the ESLint configuration
 
-4. Execute o projeto:
-npm run dev
-
-4. Acesse no navegador:
-http://localhost:5173
-
-## Status
-Em desenvolvimento (MVP sendo construído)
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

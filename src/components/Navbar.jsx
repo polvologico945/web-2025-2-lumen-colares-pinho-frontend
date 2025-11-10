@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="nav">
-      <Link to="/" className="logo">Lumen</Link>
+      <div className="nav-left">
+        <span className="logo">Lumen</span>
+      </div>
+
       <div className="nav-right">
-        <Link to="/feed">Explorar</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/perfil">Meu Perfil</Link>
+        <NavLink to="/feed" className="nav-item">Feed</NavLink>
+        <NavLink to="/dashboard" className="nav-item">Dashboard</NavLink>
+        <NavLink to="/perfil" className="nav-item">Perfil</NavLink>
       </div>
     </nav>
   );

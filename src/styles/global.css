@@ -11,3 +11,272 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   margin: 0;
 }
+
+.nav-right a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-right a:hover {
+  color: var(--primary);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  background: transparent;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--accent); /* #4800CD */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: #3a00a8;
+  transform: scale(1.05);
+}
+
+/* Layout da Tela de Login */
+.page-center {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-panel.auth {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.card-panel.auth h1.brand {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.form label {
+  display: block;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.form input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #1d2633;
+  background: #0a1118;
+  color: var(--text);
+}
+
+.btn {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #3a00a8;
+  transform: scale(1.02);
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  background: var(--surface);
+  border-bottom: 1px solid #111a22;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-item {
+  color: var(--muted);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--primary);
+}
+
+.nav-item.active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.feed-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--surface);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #111a22;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: var(--primary);
+}
+
+.tag {
+  background: #111a22;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card p {
+  margin: 8px 0 14px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.btn {
+  width: 100%;
+  background: var(--primary);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.logo-symbol {
+  animation: float 3s ease-in-out infinite;
+}
+
+.logo-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #20B2AA;
+  letter-spacing: 1.5px;
+}
+
+/* movimento da bandeira */
+@keyframes text-wave {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0px); }
+}
+
+.animated-logo {
+  animation: text-wave 2.4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px) scale(1);   filter: brightness(1); }
+  50%  { transform: translateY(-6px) scale(1.04); filter: brightness(1.10); }
+  100% { transform: translateY(0px) scale(1);   filter: brightness(1); }
+}
+
+.logo-symbol {
+  animation: float 5s ease-in-out infinite;
+}
+
+
+.footer-copy {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+

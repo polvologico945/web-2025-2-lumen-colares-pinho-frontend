@@ -1,8 +1,70 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { loginMock } from "../api/mockService";
+import Logo from "../components/Logo";
+
 export default function Login() {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  function handleChange(e) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setError("");
+
+    if (!/@/.test(form.email)) return setError("Digite um e-mail válido.");
+    if (form.password.length < 4) return setError("Senha deve ter pelo menos 4 caracteres.");
+
+    setLoading(true);
+    try {
+      await loginMock(form);
+      navigate("/feed");
+    } catch (err) {
+      setError("E-mail ou senha incorretos.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
-    <div style={{ textAlign: "center", paddingTop: "120px" }}>
-      <h1 style={{ color: "var(--primary)" }}>Lumen</h1>
-      <p style={{ color: "var(--text)" }}>Tela de Login carregada ✅</p>
+    <div className="page-center">
+      <div className="card-panel auth">
+        <Logo size={85} />
+        <p className="muted">Conecte-se com pessoas parecidas com você.</p>
+
+        <form onSubmit={handleSubmit} className="form">
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="ex: aluno@ufc.br"
+            value={form.email}
+            onChange={handleChange}
+          />
+
+          <label>Senha</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="mínimo 4 caracteres"
+            value={form.password}
+            onChange={handleChange}
+          />
+
+          {error && <div className="error">{error}</div>}
+
+          <button type="submit" className="btn" disabled={loading}>
+            {loading ? "Entrando..." : "Entrar"}
+          </button>
+        </form>
+        
+        <footer className="footer-copy">© 2025 Lumen — Todos os direitos reservados.</footer>
+      </div>
     </div>
   );
 }

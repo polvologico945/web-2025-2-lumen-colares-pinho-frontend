@@ -1,16 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login.jsx";
-import Feed from "./pages/Feed.jsx";
-import Perfil from "./pages/Perfil.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./pages/Login";
+import Feed from "./pages/Feed";
+import PostDetails from "./pages/PostDetails";
+import Perfil from "./pages/Perfil";
+import Register from "./pages/Register";
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/feed" element={<Feed />} />
+        <Route path="/post/:id" element={<PostDetails />} />
         <Route path="/perfil" element={<Perfil />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/registrar" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );

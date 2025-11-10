@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginMock } from "../api/mockService";
 import Logo from "../components/Logo";
 
 export default function Login() {
@@ -63,6 +62,10 @@ export default function Login() {
           <button type="submit" className="btn" disabled={loading}>
             {loading ? "Entrando..." : "Entrar"}
           </button>
+          <div className="register-hint">
+            Ainda não tem uma conta? <span className="register-link" onClick={() => navigate("/registrar")}>Criar conta</span>
+          </div>
+
         </form>
         <div className="footer-copy">© 2025 Lumen - Todos os direitos reservados</div>
       </div>

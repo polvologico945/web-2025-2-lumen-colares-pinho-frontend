@@ -125,3 +125,20 @@ body {
   font-size: 12px;
   color: #666;
 }
+
+.register-hint {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.register-link {
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.register-link:hover {
+  color: var(--accent);
+}

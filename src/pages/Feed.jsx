@@ -1,27 +1,26 @@
-import { useState } from "react";
-import { postsMock } from "../api/mock";
+import { useEffect, useState } from "react";
+import { getPosts } from "../api/postService";
+import { Link } from "react-router-dom";
 
 export default function Feed() {
-  const [posts, setPosts] = useState(postsMock);
+  const [posts, setPosts] = useState([]);
 
-  function apoiar(id) {
-    console.log("Apoiado:", id);
-    alert("✅ Apoio registrado em privado.");
-  }
+  useEffect(() => {
+    getPosts().then(setPosts);
+  }, []);
 
   return (
     <div className="feed-container">
       <h2>Feed</h2>
 
-      {posts.map((p) => (
-        <div key={p.id} className="card">
-          <h3>{p.nome}</h3>
-          <span className="tag">{p.curso}</span>
-          <p>{p.mensagem}</p>
+      {posts.map(post => (
+        <div className="card" key={post.id}>
+          <h3>{post.title}</h3>
+          <p>{post.body}</p>
 
-          <button className="btn" onClick={() => apoiar(p.id)}>
-            Apoiar 🤝
-          </button>
+          <Link to={`/post/${post.id}`} className="btn">
+            Ver detalhes
+          </Link>
         </div>
       ))}
     </div>

@@ -12,6 +12,18 @@ export default function Login() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
+  async function loginMock({ email, password }) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (email === "carlaevelyn20211@gmail.com" && password === "1234") {
+          resolve();
+        } else {
+          reject();
+        }
+      }, 1000); // simula 1s de delay
+    });
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
     setError("");

@@ -19,7 +19,7 @@ export default function Register() {
     if (form.password.length < 4) return setError("Senha deve ter pelo menos 4 caracteres.");
     if (form.password !== form.confirm) return setError("As senhas não coincidem.");
 
-    alert("Conta criada com sucesso! (Por enquanto é só visual 😄)");
+    alert("Conta criada com sucesso! (Ah, só estamos testando😄)");
     navigate("/");
   }
 

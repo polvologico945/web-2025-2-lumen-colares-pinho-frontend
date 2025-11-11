@@ -1,0 +1,123 @@
+.feed-page {
+  background-color: #20b2aa;
+  color: #1d1c1c;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feed-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.feed-header p {
+  flex: 1;
+  margin-left: 12px;
+  color: #e9f9f9;
+  font-size: 14px;
+}
+
+.btn-logout {
+  background: #4800cd;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.post-box {
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 16px;
+}
+
+.post-box textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  height: 80px;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.btn-post {
+  margin-top: 8px;
+  float: right;
+  background: #4800cd;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.people-section {
+  margin-top: 26px;
+}
+
+.user-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  margin-top: 10px;
+}
+
+.user-avatar {
+  background: #ddd;
+  color: #4800cd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.user-info {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.user-info strong {
+  display: block;
+  font-size: 16px;
+}
+
+.user-info p {
+  font-size: 13px;
+  color: #555;
+}
+
+.user-actions button {
+  margin-left: 8px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-open {
+  background: #4800cd;
+  border: 1px solid #ccc;
+  color: white;
+}
+
+.btn-support {
+  background: #20b2aa;
+  color: white;
+}

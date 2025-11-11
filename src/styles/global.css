@@ -85,7 +85,7 @@ body {
 .planet {
   transform-style: preserve-3d;
   filter: drop-shadow(0px 0px 22px rgba(32, 178, 170, 0.45))
-          drop-shadow(0px 0px 14px rgba(72, 0, 205, 0.22));
+          drop-shadow(0px 0px 14px rgba(72, 0, 206, 0.22));
 }
 
 /* Contêiner da logo */
@@ -111,12 +111,12 @@ body {
 /* Animação suave do texto */
 @keyframes logo-breath {
   0% { transform: translateY(0px); opacity: 1; }
-  50% { transform: translateY(-2px); opacity: 0.95; }
+  50% { transform: translateY(-10px); opacity: 0.95; }
   100% { transform: translateY(0px); opacity: 1; }
 }
 
 .animated-logo {
-  animation: logo-breath 4.2s ease-in-out infinite;
+  animation: logo-breath 3.5s ease-in-out infinite;
 }
 
 /* Copyright */

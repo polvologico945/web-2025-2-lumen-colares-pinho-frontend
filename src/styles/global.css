@@ -7,19 +7,23 @@
   --surface: #11171f;
 }
 
-body {
+/* --- BASE --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* impede rolagem lateral */
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Nunito Sans', sans-serif;
-  margin: 0;
 }
 
-/* Layout da tela de login */
+/* --- LOGIN CONTAINER --- */
 .page-center {
-  height: 100vh;
+  min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .card-panel.auth {
@@ -32,12 +36,24 @@ body {
   text-align: center;
 }
 
-/* Formulário */
-.form {
-  margin-top: 20px;
-  text-align: left;
+/* Mobile Login (Full App Layout) */
+@media (max-width: 650px) {
+  .page-center {
+    min-height: 100vh;
+    padding: 0;
+  }
+  .card-panel.auth {
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
+/* --- FORM --- */
 .form label {
   margin-top: 12px;
   display: block;
@@ -55,13 +71,6 @@ body {
   color: var(--text);
 }
 
-.error {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #ff6b6b;
-}
-
-/* Botão */
 .btn {
   margin-top: 20px;
   width: 100%;
@@ -74,21 +83,14 @@ body {
   cursor: pointer;
   transition: 0.25s;
 }
+.btn:hover { background: #3a00a8; }
 
-.btn:hover {
-  background: #3a00a8;
-}
-
-/* --- LOGO / MARCA --- */
-
-/* Globo (fixo, sem giro) */
+/* --- LOGO --- */
 .planet {
-  transform-style: preserve-3d;
   filter: drop-shadow(0px 0px 22px rgba(32, 178, 170, 0.45))
           drop-shadow(0px 0px 14px rgba(72, 0, 206, 0.22));
 }
 
-/* Contêiner da logo */
 .logo-wrap {
   display: flex;
   flex-direction: column;
@@ -96,49 +98,120 @@ body {
   gap: 6px;
   margin-bottom: 18px;
   user-select: none;
-  perspective: 800px;
 }
 
-/* Texto LUMEN */
 .logo-text {
   font-weight: 600;
   font-size: 36px;
   color: var(--primary);
   letter-spacing: 1.6px;
-  text-align: center;
+}
+@media (max-width: 650px) {
+  .logo-text { font-size: 26px; }
 }
 
-/* Animação suave do texto */
 @keyframes logo-breath {
   0% { transform: translateY(0px); opacity: 1; }
-  50% { transform: translateY(-10px); opacity: 0.95; }
+  50% { transform: translateY(-8px); opacity: 0.95; }
   100% { transform: translateY(0px); opacity: 1; }
 }
+.animated-logo { animation: logo-breath 3.5s ease-in-out infinite; }
 
-.animated-logo {
-  animation: logo-breath 3.5s ease-in-out infinite;
-}
-
-/* Copyright */
 .footer-copy {
   margin-top: 8px;
   font-size: 12px;
   color: #666;
 }
 
-.register-hint {
-  margin-top: 14px;
-  text-align: center;
-  font-size: 14px;
-  color: var(--muted);
+/* --- DASHBOARD --- */
+.dashboard-container,
+.feed-wrapper {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.register-link {
+.dashboard-card {
+  background: var(--surface);
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #111a22;
+  margin-bottom: 22px;
+}
+
+/* --- NAVBAR --- */
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 18px;
+  background: rgba(13, 17, 23, 0.7);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(72, 0, 205, 0.28);
+}
+
+.nav-logo {
+  font-size: 22px;
   color: var(--primary);
-  cursor: pointer;
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-.register-link:hover {
-  color: var(--accent);
+/* MENU */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  color: var(--text);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.25s;
+  opacity: 0.85;
+}
+.nav-item:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+.nav-item.active {
+  background: linear-gradient(120deg, var(--accent), var(--primary));
+  color: #fff;
+  opacity: 1;
+}
+
+/* Logout */
+.nav-logout {
+  background: linear-gradient(120deg, var(--accent), var(--primary));
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.nav-logout:hover { transform: scale(1.05); }
+
+/* --- MOBILE NAV --- */
+@media (max-width: 650px) {
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-right {
+    justify-content: center;
+  }
 }

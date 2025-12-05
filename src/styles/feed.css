@@ -24,15 +24,6 @@
   font-size: 14px;
 }
 
-.btn-logout {
-  background: #4800cd;
-  border: 1px solid #fff;
-  color: #fff;
-  border-radius: 6px;
-  padding: 6px 14px;
-  cursor: pointer;
-}
-
 .post-box {
   background: white;
   border-radius: 10px;

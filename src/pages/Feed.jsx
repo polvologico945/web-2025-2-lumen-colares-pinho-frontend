@@ -29,11 +29,6 @@ export default function Feed() {
       
       <div className="feed-wrapper">
 
-        <header className="feed-header">
-          <h2>Descobrir</h2>
-          <p>Conecte-se com pessoas e projetos do campus</p>
-          <button className="btn-logout" onClick={handleLogout}>Sair</button>
-        </header>
 
         <section className="post-box">
           <textarea

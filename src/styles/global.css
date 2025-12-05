@@ -9,7 +9,7 @@
 
 /* --- BASE --- */
 html, body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   overflow-x: hidden; /* impede rolagem lateral */
   background-color: var(--bg);
@@ -73,7 +73,8 @@ html, body {
 
 .btn {
   margin-top: 20px;
-  width: 100%;
+  margin: 20px auto 0 auto;
+  width: 50%;
   background: var(--accent);
   color: #fff;
   border: none;
@@ -82,6 +83,9 @@ html, body {
   font-weight: 600;
   cursor: pointer;
   transition: 0.25s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .btn:hover { background: #3a00a8; }
 
@@ -123,6 +127,13 @@ html, body {
   color: #666;
 }
 
+.dashboard-tagline, .dashboard-header {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
 /* --- DASHBOARD --- */
 .dashboard-container,
 .feed-wrapper {
@@ -131,14 +142,17 @@ html, body {
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+  text-align: center;
 }
 
-.dashboard-card {
+.dash-card {
   background: var(--surface);
-  padding: 22px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 80px;
   border: 1px solid #111a22;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px solid rgba(72, 0, 205, 0.28);
 }
 
 /* --- NAVBAR --- */
@@ -216,3 +230,4 @@ html, body {
     justify-content: center;
   }
 }
+

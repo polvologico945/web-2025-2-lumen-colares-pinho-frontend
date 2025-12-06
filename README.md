@@ -1,16 +1,45 @@
-# React + Vite
+# Lumen - Rede Social
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lumen é uma rede social moderna, com foco em feed de notícias, perfil de usuário, dashboard com estatísticas e funcionalidades adicionais, como horários de ônibus e notícias que expiram. O projeto utiliza React, React Router e CSS moderno baseado em variáveis globais.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Login e registro de usuários  
+- Feed de posts com detalhes individuais  
+- Perfil de usuário com informações e avatar  
+- Dashboard com cards e listas de atividades  
+- Menu lateral com tópicos como Horários dos Ônibus e Notícias  
+- Notícias expiram automaticamente após a data de validade  
+- Layout responsivo para desktop e mobile  
+- Temas e cores configuráveis via CSS global  
 
-## React Compiler
+## Estrutura do projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/src/pages` – Páginas do projeto (Login, Register, Feed, Dashboard, Bus, Noticia, UserProfile, PostDetails)  
+- `/src/components` – Componentes reutilizáveis (NavBar, SideMenu, DashCard, etc.)  
+- `/src/styles/global.css` – CSS global com variáveis e estilização base  
+- `/src/data/noticias.js` – Dados simulados de notícias (para testes)  
 
-## Expanding the ESLint configuration
+## ⚡ Como rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar o repositório:
+```bash
+git clone https://github.com/polvologico945/web-2025-2-lumen-colares-pinho-frontend.git
+cd lumen
+
+Depois:
+
+npm install
+# ou
+yarn
+
+Depois:
+
+npm run dev
+# ou
+yarn dev
+
+Depois:
+
+Acesse http://localhost:5173 ou pressione Ctrl + Click no link.
+

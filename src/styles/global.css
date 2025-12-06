@@ -7,15 +7,17 @@
   --surface: #11171f;
 }
 
+
 /* --- BASE --- */
 html, body {
   margin: 10px;
   padding: 0;
-  overflow-x: hidden; /* impede rolagem lateral */
+  overflow-x: hidden;
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Nunito Sans', sans-serif;
 }
+
 
 /* --- LOGIN CONTAINER --- */
 .page-center {
@@ -53,6 +55,7 @@ html, body {
   }
 }
 
+
 /* --- FORM --- */
 .form label {
   margin-top: 12px;
@@ -88,6 +91,7 @@ html, body {
   justify-content: center;
 }
 .btn:hover { background: #3a00a8; }
+
 
 /* --- LOGO --- */
 .planet {
@@ -127,12 +131,13 @@ html, body {
   color: #666;
 }
 
-.dashboard-tagline, .dashboard-header {
+.dashboard-tagline {
   margin-top: 6px;
   font-size: 14px;
   color: var(--muted);
   text-align: center;
 }
+
 
 /* --- DASHBOARD --- */
 .dashboard-container,
@@ -242,14 +247,12 @@ html, body {
   margin-top: 40px;
 }
 
-
 .dash-card {
   background: linear-gradient(
     180deg,
     rgba(255,255,255,0.03),
     rgba(0,0,0,0.2)
   ), var(--surface);
-
   padding: 20px;
   border-radius: 30px;
   margin-bottom: 30px;
@@ -260,11 +263,11 @@ html, body {
     inset 0 0 0 1px rgba(255,255,255,0.03);
 }
 
-
 .dash-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
 }
+
 
 /* --- NAVBAR --- */
 .nav {
@@ -272,11 +275,9 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 100;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 12px 18px;
   background: rgba(13, 17, 23, 0.7);
   backdrop-filter: blur(14px);
@@ -351,7 +352,6 @@ html, body {
   opacity: 1;
 }
 
-
 .nav-logout:hover { transform: scale(1.05); }
 
 /* --- MOBILE NAV --- */
@@ -364,6 +364,7 @@ html, body {
     justify-content: center;
   }
 }
+
 
 /* ===============================
    SIDE MENU (LATERAL)
@@ -398,11 +399,9 @@ html, body {
   background: var(--surface);
   border-right: 1px solid rgba(72, 0, 205, 0.28);
   box-shadow: 6px 0 20px rgba(0, 0, 0, 0.5);
-
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 300;
-
   display: flex;
   flex-direction: column;
 }
@@ -459,6 +458,7 @@ html, body {
   background: linear-gradient(120deg, var(--accent), var(--primary));
   color: #fff;
 }
+
 /* ===============================
    USER PROFILE
    =============================== */
@@ -563,6 +563,7 @@ html, body {
   }
 }
 
+
 /* ===============================
    DASHBOARD
    =============================== */
@@ -623,6 +624,7 @@ html, body {
   margin-bottom: 6px;
   background: linear-gradient(120deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -687,14 +689,14 @@ html, body {
 }
 
 .bus-page {
-  min-height: calc(100vh - 80px); /* respeita a navbar */
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .bus-image {
-  width: 800px;        /* 🔹 aqui controla o tamanho */
+  width: 800px;
   max-width: 100%;
   opacity: 0.9;
   filter: drop-shadow(0 0 24px rgba(72, 0, 205, 0.4));

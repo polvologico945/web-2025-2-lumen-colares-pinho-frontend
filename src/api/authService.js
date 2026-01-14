@@ -1,12 +1,13 @@
-const API_URL = "http://localhost:8000";
+/* eslint-disable no-undef */
+const API_URL = "http://127.0.0.1:8000/api";
 
-export async function login({ email, password }) {
+export async function login({ email, senha }) {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email, senha }),
   });
 
   if (!res.ok) {
@@ -17,8 +18,8 @@ export async function login({ email, password }) {
 
   // adapta a resposta do backend para o formato que o Login.jsx espera
   return {
-    user: data.user,
-    token: data.access_token,
+    user: data.usuario,
+    token: data.token,
   };
 }
 

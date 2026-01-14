@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
@@ -10,8 +11,7 @@ export default function Login() {
   //Estado de mensagens e controle
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
-  const emailRegex =
-    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   //Validação em tempo real (onChange)
   function validateField(name, value) {
@@ -103,17 +103,14 @@ export default function Login() {
     }
   }
 
-
   return (
     <div className="page-center">
       <div className="card-panel auth">
-
         <Logo size={125} />
 
         <p className="muted">Conecte-se com pessoas parecidas com você.</p>
 
         <form onSubmit={handleSubmit} className="form">
-
           <label>Email</label>
           <input
             type="email"
@@ -151,13 +148,11 @@ export default function Login() {
               Criar conta
             </span>
           </div>
-
         </form>
 
         <div className="footer-copy">
           ©️ 2025 Lumen - Todos os direitos reservados
         </div>
-
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = "http://127.0.0.1:8000/api";
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;

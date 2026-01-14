@@ -534,17 +534,17 @@ const styles = {
 };
 
 if (typeof document !== "undefined") {
-  const styleSheet = document.styleSheets[0];
-  if (styleSheet) {
-    styleSheet.insertRule(
-      `
+  const styleId = "bus-spin-animation";
+  if (!document.getElementById(styleId)) {
+    const style = document.createElement("style");
+    style.id = styleId;
+    style.textContent = `
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
-    `,
-      styleSheet.cssRules.length
-    );
+    `;
+    document.head.appendChild(style);
   }
 }
 

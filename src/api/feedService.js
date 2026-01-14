@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = "http://127.0.0.1:8000/api";
 
 export async function getPosts() {
   try {
@@ -129,5 +129,59 @@ export async function getOnibusPorTipo(tipo) {
   } catch (error) {
     console.error(`Erro em getOnibusPorTipo(${tipo}):`, error);
     return [];
+  }
+}
+
+export async function getUserById(userId) {
+  try {
+        console.log("Buscando usuário ID:", userId);
+    
+    const mockUsers = {
+      1: {
+        id: 1,
+        nome: "Carla Evelyn",
+        email: "carla@teste.com",
+        username: "carla_e",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        bio: "Estudante",
+        idade: 22,
+        cidade: "Quixadá",
+        empresa: "UFC",
+        seguidores: 120,
+        seguindo: 85
+      },
+      2: {
+        id: 2,
+        nome: "Maria Barros", 
+        email: "maria.barros@alu.ufc.br",
+        username: "maria_s",
+        avatar: "https://i.pravatar.cc/150?img=2",
+        bio: "Estudante",
+        idade: 21,
+        cidade: "Quixadá",
+        empresa: "UFC",
+        seguidores: 95,
+        seguindo: 110
+      }
+    };
+    
+    const userData = mockUsers[userId] || {
+      id: userId,
+      nome: "Usuário Desconhecido",
+      email: "usuario@teste.com",
+      avatar: "https://i.pravatar.cc/150",
+      bio: "Usuário do sistema",
+      idade: 25,
+      cidade: "Quixadá",
+      empresa: "UFC",
+      seguidores: 0,
+      seguindo: 0
+    };
+    
+    return userData;
+    
+  } catch (error) {
+    console.error("Erro em getUserById:", error);
+    return null;
   }
 }

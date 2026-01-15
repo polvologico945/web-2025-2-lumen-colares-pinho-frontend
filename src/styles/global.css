@@ -1,21 +1,19 @@
 :root {
   --primary: #20B2AA;
   --accent: #4800CD;
-  --bg: #0D1117;
+  --bg: #0D1117; 
   --text: #E6E6E6;
-  --muted: #9aa5b1;
   --surface: #11171f;
 }
 
 
 /* --- BASE --- */
 html, body {
-  margin: 10px;
+  margin: 0; 
   padding: 0;
-  overflow-x: hidden;
-  background-color: var(--bg);
+  background-color: var(--bg) !important;
   color: var(--text);
-  font-family: 'Nunito Sans', sans-serif;
+  min-height: 100vh;
 }
 
 
@@ -700,4 +698,17 @@ html, body {
   max-width: 100%;
   opacity: 0.9;
   filter: drop-shadow(0 0 24px rgba(72, 0, 205, 0.4));
+}
+
+.profile-bio {
+  font-size: 15px;
+  color: #d1d5db;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* Ajuste para os itens da meta ficarem em colunas */
+.profile-meta div {
+  flex: 1;
+  text-align: center;
 }

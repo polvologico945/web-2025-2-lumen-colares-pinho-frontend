@@ -1,0 +1,286 @@
+/* src/components/ImageUpload/ImageUpload.css */
+.image-upload-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.upload-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.upload-stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slot-counter {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  font-size: 14px;
+}
+
+.slot-counter.max-reached {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.remaining-slots {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Drop Zone */
+.drop-zone {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.drop-zone:hover {
+  border-color: #2196f3;
+  background: #f0f8ff;
+}
+
+.drop-zone.drag-over {
+  border-color: #2196f3;
+  background: #e3f2fd;
+}
+
+.drop-content {
+  pointer-events: none;
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.drop-text {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.browse-link {
+  color: #2196f3;
+  font-weight: 500;
+  pointer-events: auto;
+}
+
+.drop-hint {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Error Messages */
+.error-messages {
+  margin-bottom: 15px;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #d32f2f;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Image Previews */
+.image-previews {
+  margin-bottom: 20px;
+}
+
+.image-previews h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.preview-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.preview-image-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.preview-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.image-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.image-name {
+  color: #333;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.image-size {
+  color: #666;
+  margin-left: 10px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background: #f44336;
+  transform: scale(1.1);
+}
+
+.image-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-badge {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.status-badge.existing {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.new {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.upload-progress {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Upload Actions */
+.upload-actions {
+  margin-bottom: 20px;
+}
+
+.btn-select {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn-select:hover {
+  background: #0d8bf2;
+}
+
+/* Upload Tips */
+.upload-tips {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ff9800;
+}
+
+.upload-tips p {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-tips ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.upload-tips li {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .drop-zone {
+    padding: 30px 15px;
+  }
+  
+  .preview-image {
+    max-height: 150px;
+  }
+}
